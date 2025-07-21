@@ -1,0 +1,9 @@
+[user]
+	email = stefanichim2201@gmail.com
+
+# this will overwrite the previous attributes
+[includeIf "gitdir:/home/ichim-stefan/repos/rinftech/"]
+  path = /home/ichim-stefan/repos/rinftech/.gitconfig_rinftech
+
+[log]
+  date = iso
