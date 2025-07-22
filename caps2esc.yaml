@@ -1,0 +1,8 @@
+# stored at: /etc/interception/udevmon.d/caps2esc.yaml
+# Maps CapsLock to Escape
+# sudo apt install interception-tools interception-tools-compat
+
+- JOB: intercept -g $DEVNODE | caps2esc | uinput -d $DEVNODE
+  DEVICE:
+    EVENTS:
+      EV_KEY: [KEY_CAPSLOCK, KEY_ESC]
