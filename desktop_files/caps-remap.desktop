@@ -1,0 +1,11 @@
+# desktop entry 
+# stored in ~/.config/autostart/ 
+# automatically sets Caps Lock as second Control_L 
+# then makes Control_L act as Escape
+[Desktop Entry]
+Type=Application
+Name=Caps Lock Remap
+Exec=bash -c "setxkbmap -option ctrl:nocaps && xcape -e 'Control_L=Escape' -t 1"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true

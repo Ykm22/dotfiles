@@ -1,0 +1,14 @@
+# stored in ~/.local/share/applications/
+# uses ghostty launch script, manually placed in ~/.local/bin/
+# uses ghostty icon from ghostty repo
+[Desktop Entry]
+Name=Ghostty
+Comment=A fast, feature-rich, and cross-platform terminal emulator
+Exec=/home/ichim-stefan/.local/bin/ghostty
+Icon=/home/ichim-stefan/Programs/ghostty/images/icons/icon_512.png
+Terminal=false
+Type=Application
+Categories=System;TerminalEmulator;
+StartupNotify=true
+StartupWMClass=ghostty
+Keywords=terminal;shell;prompt;command;commandline;
