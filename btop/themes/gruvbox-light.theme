@@ -1,0 +1,82 @@
+# Gruvbox Light theme for btop
+# Based on the gruvbox light color scheme
+
+# Main background and foreground
+theme[main_bg]="#f2e5bc"
+theme[main_fg]="#3c3836"
+
+# Highlight colors
+theme[hi_fg]="#9d0006"
+theme[selected_bg]="#ebdbb2"
+theme[selected_fg]="#282828"
+theme[inactive_fg]="#7c6f64"
+
+# Title colors
+theme[proc_misc]="#076678"
+theme[cpu_box]="#b57614"
+theme[mem_box]="#8f3f71"
+theme[net_box]="#79740e"
+theme[proc_box]="#af3a03"
+theme[div_line]="#a89984"
+
+# Graph colors
+theme[temp_start]="#b57614"
+theme[temp_mid]="#d79921"
+theme[temp_end]="#9d0006"
+
+# CPU graph colors
+theme[cpu_start]="#458588"
+theme[cpu_mid]="#83a598"
+theme[cpu_end]="#076678"
+
+# Memory graph colors  
+theme[free_start]="#98971a"
+theme[free_mid]="#b8bb26"
+theme[free_end]="#79740e"
+
+theme[cached_start]="#d79921"
+theme[cached_mid]="#fabd2f"
+theme[cached_end]="#b57614"
+
+theme[available_start]="#689d6a"
+theme[available_mid]="#8ec07c"
+theme[available_end]="#427b58"
+
+theme[used_start]="#cc241d"
+theme[used_mid]="#fb4934"
+theme[used_end]="#9d0006"
+
+# Disk graph colors
+theme[download_start]="#458588"
+theme[download_mid]="#83a598"
+theme[download_end]="#076678"
+
+theme[upload_start]="#8f3f71"
+theme[upload_mid]="#d3869b"
+theme[upload_end]="#b16286"
+
+# Process list colors
+theme[process_start]="#3c3836"
+theme[process_mid]="#504945"
+theme[process_end]="#665c54"
+
+# Graph symbols colors
+theme[graph_text]="#3c3836"
+theme[meter_bg]="#d5c4a1"
+theme[meter_fg]="#3c3836"
+
+# Border colors
+theme[cpu_bg]="#ebdbb2"
+theme[mem_bg]="#ebdbb2"
+theme[net_bg]="#ebdbb2"
+theme[proc_bg]="#ebdbb2"
+
+# GPU colors (if applicable)
+theme[gpu_start]="#d65d0e"
+theme[gpu_mid]="#fe8019"
+theme[gpu_end]="#af3a03"
+
+# Battery colors
+theme[battery_start]="#98971a"
+theme[battery_mid]="#b8bb26" 
+theme[battery_end]="#79740e"
