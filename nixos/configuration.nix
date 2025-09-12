@@ -15,13 +15,23 @@
   boot = {
     loader = {
       systemd-boot = {
-        enable = false;
+        enable = true;
       };
       grub = {
-        enable = true;
+        enable = false;  
 	device = "nodev";
 	efiSupport = true;
 	useOSProber = true;
+	extraConfig = ''
+  	# Chainloads Windows from the second NVMe drive
+          menuentry "Windows Boot Manager" {
+            insmod part_gpt
+            insmod chain
+            insmod ntfs
+            set root=(hd1,gpt2)
+            chainloader /Windows/Boot/EFI/bootmgfw.efi
+        }
+        '';
       };
       efi = {
         canTouchEfiVariables = true;
@@ -30,7 +40,7 @@
   };
 
   networking.wg-quick.interfaces = {
-    w0 = {
+    wg0 = {
       configFile = "/etc/wireguard/wg0.conf";
     };
   };
@@ -162,16 +172,16 @@
   };
 
   environment.systemPackages = with pkgs; [
-    (writeShellScriptBin "wg-toggle" ''
-      CONFIG_NAME="wg0"
-      if wg show "$CONFIG_NAME" &>/dev/null; then
-          echo "VPN is active. Bringing it down..."
-          wg-quick down "$CONFIG_NAME"
-      else
-          echo "VPN is inactive. Bringing it up..."
-          wg-quick up "$CONFIG_NAME"
-      fi
-    '')
+    # (writeShellScriptBin "wg-toggle" ''
+    #   CONFIG_NAME="wg0"
+    #   if wg show "$CONFIG_NAME" &>/dev/null; then
+    #       echo "VPN is active. Bringing it down..."
+    #       wg-quick down "$CONFIG_NAME"
+    #   else
+    #       echo "VPN is inactive. Bringing it up..."
+    #       wg-quick up "$CONFIG_NAME"
+    #   fi
+    # '')
     sddm-chili-theme # login screen sddm theme
 
     # general commands
@@ -225,6 +235,7 @@
     waybar
     btop
     walker
+    ranger
 
     # my apps
     firefox
@@ -244,6 +255,11 @@
     osu-lazer
     libwacom
     libinput
+    
+    os-prober
+    libreoffice
+
+    steam
   ];
 
   fonts.packages = with pkgs; [
