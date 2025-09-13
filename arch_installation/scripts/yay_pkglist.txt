@@ -1,0 +1,4 @@
+pavucontrol-git
+steam
+teams-for-linux
+spotify

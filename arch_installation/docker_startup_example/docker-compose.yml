@@ -1,0 +1,12 @@
+services:
+  archlinux:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: archlinux
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    environment:
+      - USER_NAME=test_user
+      - USER_PASSWORD=test_password
